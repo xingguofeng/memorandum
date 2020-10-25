@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.xgf.dao.PersonalDao">
+    <select id="selectPersonal" resultType="Personal">
+        select id,time,event from personevent;
+    </select>
+
+    <insert id="insertPersonal">
+        INSERT INTO personevent(time,event) VALUES (#{time},#{event});
+
+    </insert>
+</mapper>
